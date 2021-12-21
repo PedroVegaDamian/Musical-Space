@@ -1,0 +1,66 @@
+@use 'variables';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  font-family: variables.$primary-font;
+  background-color: variables.$background-color;
+}
+
+#app {
+  height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: variables.$primary-color;
+
+  &:hover {
+    transition: 0.5s;
+    color: variables.$secondary-color;
+  }
+}
+
+.router-link-exact-active {
+  transform: scale(1.1);
+  color: variables.$primary-color;
+}
