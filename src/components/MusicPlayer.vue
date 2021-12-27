@@ -1,6 +1,7 @@
 <template>
   <div class="musicPlayer">
-    <SongInformation :song="getSongSelected" />
+    <SongInformation v-if="getSongSelected.id !== ''" :song="getSongSelected" />
+    <SongInformationSkelton v-else />
     <ControlsPlayer />
     <SongSlider />
   </div>
@@ -12,6 +13,7 @@ import { useHomeStore } from 'store/Home'
 import SongSlider from './SongSlider.vue'
 import ControlsPlayer from './ControlsPlayer.vue'
 import SongInformation from './SongInformation.vue'
+import SongInformationSkelton from './SongInformationSkelton.vue'
 
 const homeStore = useHomeStore()
 const { getSongSelected } = storeToRefs(homeStore)

@@ -1,7 +1,12 @@
 <template>
   <div class="songList">
     <div class="songList__wrapper">
-      <SongCard v-for="song of songs" :key="song.id" :song="song" />
+      <template v-if="songs.length !== 0">
+        <SongCard v-for="song of songs" :key="song.id" :song="song" />
+      </template>
+      <template v-else>
+        <SongCardSkeleton v-for="i of 6" :key="i" />
+      </template>
     </div>
   </div>
 </template>
@@ -10,6 +15,7 @@
 import { PropType } from 'vue'
 import { Song } from 'interfaces/Song'
 import SongCard from 'components/SongCard.vue'
+import SongCardSkeleton from './SongCardSkeleton.vue'
 
 defineProps({
   songs: {
