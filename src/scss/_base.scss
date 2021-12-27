@@ -12,8 +12,8 @@ html {
 
 body {
   height: 100vh;
-  font-family: variables.$primary-font;
   background-color: variables.$background-color;
+  font-family: variables.$primary-font, 'system-ui', sans-serif;
 }
 
 #app {
@@ -41,7 +41,7 @@ button {
   outline: none;
   cursor: pointer;
   padding: 10px 20px;
-  font-family: inherit;
+  font-family: inherit, sans-serif;
 }
 
 img {
