@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { ref, watchEffect } from 'vue'
-import { useHomeStore } from 'store/Home'
+import { useHomeStore } from '@/store/Home'
 
 const homeStore = useHomeStore()
 const { currentSectionsSong, durationSong } = storeToRefs(homeStore)

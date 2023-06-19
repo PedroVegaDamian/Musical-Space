@@ -1,25 +1,29 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "allowJs": true,
-    "jsx": "preserve",
-    "sourceMap": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@/*": ["src/*"],
-      "components/*": ["src/components/*"],
-      "interfaces/*": ["src/interfaces/*"],
-      "layout/*": ["src/layout/*"],
-      "pages/*": ["src/pages/*"],
-      "services/*": ["src/services/*"],
-      "store/*": ["src/store/*"]
+      "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

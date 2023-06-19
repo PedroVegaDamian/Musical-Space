@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { useHomeStore } from 'store/Home'
+import { useHomeStore } from '@/store/Home'
 import SongSlider from './SongSlider.vue'
 import ControlsPlayer from './ControlsPlayer.vue'
 import SongInformation from './SongInformation.vue'

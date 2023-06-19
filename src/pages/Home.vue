@@ -7,8 +7,8 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { useHomeStore } from 'store/Home'
-import SongList from 'components/SongList.vue'
+import { useHomeStore } from '@/store/Home'
+import SongList from '@/components/SongList.vue'
 import MusicPlayer from '@/components/MusicPlayer.vue'
 
 const homeStore = useHomeStore()

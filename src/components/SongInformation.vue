@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { PropType } from 'vue'
-import { Song } from 'interfaces/Song'
+import { Song } from '@/interfaces/Song'
 
 defineProps({
   song: {

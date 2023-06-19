@@ -1,6 +1,6 @@
 import { db } from '@/.firebase'
 import { getDocs, collection } from 'firebase/firestore'
-import { Song } from 'interfaces/Song'
+import { Song } from '@/interfaces/Song'
 
 const songsRef = collection(db, 'list_music')
 

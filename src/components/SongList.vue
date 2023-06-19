@@ -13,8 +13,8 @@
 
 <script setup lang="ts">
 import { PropType } from 'vue'
-import { Song } from 'interfaces/Song'
-import SongCard from 'components/SongCard.vue'
+import { Song } from '@/interfaces/Song'
+import SongCard from '@/components/SongCard.vue'
 import SongCardSkeleton from './SongCardSkeleton.vue'
 
 defineProps({

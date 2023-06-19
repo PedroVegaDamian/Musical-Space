@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { useHomeStore } from 'store/Home'
+import { useHomeStore } from '@/store/Home'
 import ButtonPlayer from './ButtonPlayer.vue'
 
 const { previousSong, pauseCurrentSong, playCurrentSong, nextSong } =

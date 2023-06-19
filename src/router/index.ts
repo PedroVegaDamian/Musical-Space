@@ -5,12 +5,13 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'LayoutHome',
     component: () =>
-      import(/* webpackChunkName: "LayoutHome" */ 'layout/LayoutHome.vue'),
+      import(/* webpackChunkName: "LayoutHome" */ '@/layout/LayoutHome.vue'),
     children: [
       {
         path: '',
         name: 'Home',
-        component: () => import(/* webpackChunkName: "Home" */ 'pages/Home.vue')
+        component: () =>
+          import(/* webpackChunkName: "Home" */ '@/pages/Home.vue')
       }
     ]
   },
@@ -18,7 +19,7 @@ const routes: RouteRecordRaw[] = [
     path: '/:pathmatch(.*)*',
     name: 'Page404',
     component: () =>
-      import(/* webpackChunkName: "Page404" */ 'pages/Page404.vue')
+      import(/* webpackChunkName: "Page404" */ '@/pages/Page404.vue')
   }
 ]
 
