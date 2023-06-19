@@ -10,8 +10,8 @@
 
 <script setup lang="ts">
 import { PropType } from 'vue'
-import { Song } from 'interfaces/Song'
-import { useHomeStore } from 'store/Home'
+import { Song } from '@/interfaces/Song'
+import { useHomeStore } from '@/store/Home'
 
 defineProps({
   song: {

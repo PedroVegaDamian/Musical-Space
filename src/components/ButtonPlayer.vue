@@ -1,9 +1,3 @@
-<template>
-  <button class="buttonPlayer">
-    <img class="buttonPlayer__icon" :src="path" :alt="icon" />
-  </button>
-</template>
-
 <script setup lang="ts">
 const { icon } = defineProps({
   icon: {
@@ -22,6 +16,12 @@ const { icon } = defineProps({
 
 const path = `/images/${icon}.png`
 </script>
+
+<template>
+  <button class="buttonPlayer">
+    <img class="buttonPlayer__icon" :src="path" :alt="icon" />
+  </button>
+</template>
 
 <style lang="scss" scoped>
 .buttonPlayer {

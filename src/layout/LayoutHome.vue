@@ -4,8 +4,6 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
 <style lang="scss" scoped>
 .layoutHome {
   width: 100%;
